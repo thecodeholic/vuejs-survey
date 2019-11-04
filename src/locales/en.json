@@ -1,3 +1,11 @@
 {
-  "message": "hello i18n !!"
+  "message": "hello i18n !!",
+  "hello": "Hello i18n in SFC!",
+  "lobiForm": {
+    "form": {
+      "name": "Form name",
+      "name_placeholder": "Form title",
+      "description": "Description"
+    }
+  }
 }

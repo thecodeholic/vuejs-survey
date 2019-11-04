@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <LobiFormBuilder/>
+    <pre>{{formData}}</pre>
+    <LobiFormBuilder form-name="testForm" :form-data="formData" :read-only="readOnly"/>
     <HelloI18n/>
     {{ $t('message')}}
   </div>
@@ -13,7 +14,16 @@
 
   export default {
     name: 'app',
-    components: {LobiFormBuilder, HelloI18n}
+    components: {
+      LobiFormBuilder,
+      HelloI18n
+    },
+    data() {
+      return {
+        formData: {},
+        readOnly: false
+      }
+    }
   }
 </script>
 
