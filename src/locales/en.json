@@ -6,6 +6,16 @@
       "name": "Form name",
       "name_placeholder": "Form title",
       "description": "Description"
+    },
+    "page": {
+      "tab": {
+        "heading": "Page {{page}} of {{allPages}}"
+      },
+      "elements": {
+        "empty": "Empty page"
+      },
+      "pageWithNameCheckbox": "named",
+      "name": "Page name"
     }
   }
 }
