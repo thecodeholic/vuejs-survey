@@ -26,8 +26,14 @@
         </b-form-group>
       </div>
       <div class="form-page-list">
-            <LobiFormPageBuilder ng-repeat="page in ctrl.formData.pages| mwStartFrom:ctrl.currentPage * ctrl.options.pageSize | limitTo:ctrl.options.pageSize" form-page="page" form-object="ctrl.formData" is-first="$first" is-last="$last" read-only="ctrl.readOnly"></LobiFormPageBuilder>
-        </div>
+        <LobiFormPageBuilder v-for="(page, index) in formData.pages"
+                             v-bind:key="index"
+                             :form-page="page"
+                             :form-object="formData"
+                             :is-first="index === 0"
+                             :is-last="index === formData.pages.length -1"
+                             :read-only="readOnly"></LobiFormPageBuilder>
+      </div>
     </form>
   </div>
 </template>

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <pre>{{formData}}</pre>
+<!--    <pre>{{formData}}</pre>-->
     <LobiFormBuilder form-name="testForm" :form-data="formData" :read-only="readOnly"/>
     <HelloI18n/>
     {{ $t('message')}}
@@ -20,7 +20,27 @@
     },
     data() {
       return {
-        formData: {},
+        formData: {
+          pages: [
+            {
+              sections: [
+                {},
+                {},
+              ]
+            },
+            {
+              sections: [
+                {
+                  elements: [
+                    {
+
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
         readOnly: false
       }
     }
